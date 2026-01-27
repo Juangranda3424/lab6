@@ -1,16 +1,16 @@
 name: CI Wokflow
 
-on: 
+on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
 
 
-jobs: 
-  build-and-test: 
+jobs:
+  build-and-test:
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - name: Clonar el repositorio
         uses: actions/checkout@v4
       - name: Configurar node.jobs
@@ -24,5 +24,5 @@ jobs:
       - name: Ejecutar pruebas
         run: npm test   
       - name: Simular despliegue
-        run:
+        run: |
           echo "Despliegue simulado: La aplicacion pasa el lint y las pruebas correctamente."
