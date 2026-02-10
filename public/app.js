@@ -1,18 +1,18 @@
+
+// JUAN GRANDA
 function toCelsius(fahrenheit) {
+    if (typeof fahrenheit !== 'number' || !isFinite(fahrenheit)) {
+        throw new TypeError('Debe ser un número finito');
+    }   
 
-    if (typeof fahrenheit !== 'number') {
-        throw new Error('Input must be a number');
-    }
-
-    return (fahrenheit - 32) * 5 / 9;
+    return ((fahrenheit - 32) * 5 / 9).toFixed(1);
 }
 
+// JUAN GRANDA
 
 function toFahrenheit(centigrados) {
-    if (typeof centigrados !== 'number') {
-        throw new Error('Input must be a number');
+    if (typeof centigrados !== 'number' || !isFinite(centigrados)) {
+        throw new TypeError('Debe ser un número finito');
     }   
-    return (centigrados * (9 / 5) ) + 32;
+    return ((centigrados * (9 / 5)) + 32).toFixed(1);
 }
-
-

@@ -1,3 +1,5 @@
+
+// JUAN GRANDA
 function toCelsius(fahrenheit) {
     if (typeof fahrenheit !== 'number' || !isFinite(fahrenheit)) {
         throw new TypeError('Debe ser un número finito');
@@ -6,6 +8,7 @@ function toCelsius(fahrenheit) {
     return ((fahrenheit - 32) * 5 / 9).toFixed(1);
 }
 
+// JUAN GRANDA
 
 function toFahrenheit(centigrados) {
     if (typeof centigrados !== 'number' || !isFinite(centigrados)) {
@@ -13,6 +16,7 @@ function toFahrenheit(centigrados) {
     }   
     return ((centigrados * (9 / 5)) + 32).toFixed(1);
 }
+// JUAN GRANDA
 
 function movingAverage(series, window) {
     
@@ -40,5 +44,6 @@ function movingAverage(series, window) {
 
     return array;
 }
+// JUAN GRANDA
 
 module.exports = { toCelsius, toFahrenheit, movingAverage };
